@@ -1,0 +1,156 @@
+/* General Body & Font Styles */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    margin: 0;
+    background-color: #f9fafb;
+    color: #111827;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Dark Mode Theme */
+body.dark-mode {
+    background-color: #111827;
+    color: #f9fafb;
+}
+body.dark-mode .card,
+body.dark-mode .panel,
+body.dark-mode header,
+body.dark-mode footer {
+    background-color: #1f2937;
+    border-color: #374151;
+}
+
+/* Layout */
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header, footer {
+    border-bottom: 1px solid #e5e7eb;
+    padding: 15px 20px;
+}
+footer {
+    border-bottom: none;
+    border-top: 1px solid #e5e7eb;
+    text-align: center;
+    margin-top: 40px;
+    color: #6b7280;
+}
+
+/* Header Navigation */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+nav a.logo {
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: bold;
+    color: inherit;
+}
+.theme-switcher {
+    padding: 8px 12px;
+    border: 1px solid #d1d5db;
+    background-color: transparent;
+    color: inherit;
+    border-radius: 6px;
+    cursor: pointer;
+}
+body.dark-mode .theme-switcher {
+    border-color: #4b5563;
+}
+
+/* Story List on Homepage */
+#story-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+}
+.card {
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: #ffffff;
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1);
+}
+.card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+.card-content {
+    padding: 16px;
+}
+.card h2 {
+    margin: 0 0 8px 0;
+    font-size: 20px;
+}
+.card p {
+    margin: 0;
+    color: #6b7280;
+}
+
+/* Single Story Page */
+.story-header img {
+    width: 100%;
+    max-height: 400px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+.story-content h2 {
+    border-top: 1px solid #e5e7eb;
+    padding-top: 20px;
+    margin-top: 30px;
+}
+body.dark-mode .story-content h2 {
+    border-top-color: #374151;
+}
+
+/* Admin Panel */
+.panel {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid #e5e7eb;
+    margin-bottom: 20px;
+}
+.form-group {
+    margin-bottom: 15px;
+}
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+.form-group input, .form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #d1d5db;
+    box-sizing: border-box; /* Important for width */
+}
+button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 500;
+    color: #ffffff;
+}
+.btn-primary { background-color: #3b82f6; }
+.btn-danger { background-color: #ef4444; }
+.admin-story-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
