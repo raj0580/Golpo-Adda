@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body style="background-color: #e5e7eb;">
+
+    <div class="container">
+        <!-- LOGIN FORM -->
+        <div id="login-container" class="panel" style="margin-top: 50px;">
+            <h2>Admin Login</h2>
+            <form id="login-form">
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" required>
+                </div>
+                <button type="submit" class="btn-primary">Login</button>
+            </form>
+        </div>
+
+        <!-- ADMIN PANEL (Hidden by default) -->
+        <main id="admin-panel" style="display: none;">
+            <div style="display: flex; justify-content: space-between; align-items: center;">
+                <h1>Admin Panel</h1>
+                <button id="logout-button" class="btn-danger">Logout</button>
+            </div>
+
+            <div class="panel">
+                <h2>Create New Story</h2>
+                <form id="create-story-form">
+                    <div class="form-group"><label for="title">Title</label><input type="text" id="title" required></div>
+                    <div class="form-group"><label for="author">Author</label><input type="text" id="author" required></div>
+                    <div class="form-group"><label for="coverImage">Cover Image URL</label><input type="url" id="coverImage" required></div>
+                    <button type="submit" class="btn-primary">Create Story</button>
+                </form>
+            </div>
+            
+            <div class="panel">
+                <h2>Add Chapter to Story</h2>
+                <form id="add-chapter-form">
+                    <div class="form-group"><label for="story-select">Select Story</label><select id="story-select" required></select></div>
+                    <div class="form-group"><label for="chapter-title">Chapter Title</label><input type="text" id="chapter-title" required></div>
+                    <div class="form-group"><label for="chapter-content">Chapter Content</label><textarea id="chapter-content" rows="10" required></textarea></div>
+                    <div class="form-group"><label for="chapter-order">Chapter Order</label><input type="number" id="chapter-order" value="1" required></div>
+                    <button type="submit" class="btn-primary">Add Chapter</button>
+                </form>
+            </div>
+            
+            <div class="panel">
+                <h2>Manage Stories</h2>
+                <div id="manage-story-list"></div>
+            </div>
+        </main>
+    </div>
+
+    <!-- ADD THE AUTHENTICATION SDK SCRIPT -->
+    <script src="https://www.gstatic.com/firebasejs/9.6.7/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.7/firebase-firestore-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.7/firebase-auth-compat.js"></script>
+    
+    <script src="app.js"></script>
+</body>
+</html>

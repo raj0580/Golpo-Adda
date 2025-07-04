@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- The title will be set by JavaScript -->
+    <title>Loading Story...</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <nav>
+                <a href="/" class="logo">Golpo Adda</a>
+                <button class="theme-switcher">Toggle Theme</button>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <div id="story-container">
+            <!-- Story content will be loaded here by JavaScript -->
+            <p>Loading content...</p>
+        </div>
+    </main>
+    
+    <footer>
+        <div class="container">
+            <p>© 2023 Golpo Adda</p>
+        </div>
+    </footer>
+
+    <!-- Firebase SDK Scripts -->
+    <script src="https://www.gstatic.com/firebasejs/9.6.7/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.7/firebase-firestore-compat.js"></script>
+
+    <!-- Your App's JavaScript -->
+    <script src="app.js"></script>
+</body>
+</html>
